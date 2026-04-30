@@ -1,1 +1,0 @@
-# tourist_safety_predictor
