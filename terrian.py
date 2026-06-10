@@ -1,6 +1,6 @@
 import numpy as np
 
-print("Recalculating step-by-step physical fatigue...")
+
 
 # ── 1. Effort Multiplier ──────────────────────────────────────────────────────
 conditions_speed = [
@@ -56,5 +56,5 @@ df['fatigue_index'] = np.clip(df['fatigue_index'] * SCALE_FACTOR, 0, 100)  # als
 # ── 8. Cleanup ────────────────────────────────────────────────────────────────
 df = df.drop(columns=['effort_multiplier', 'terrain_multiplier', 'step_fatigue'])
 
-print("Done. Fatigue index recalculated.\n")
+
 print(df[['speed_kmh', 'grade', 'terrain', 'fatigue_index']].head(20))
